@@ -7,13 +7,13 @@ import java.util.Map;
 public class Principal {
     public static void main(String[] args) throws Exception {
         // top 250 filmes https://imdb-api.com/en/API/Top250Movies/k_o0rb5eyp
-        String url = "https://imdb-api.com/en/API/Top250Movies/k_o0rb5eyp";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
+//        String url = "https://imdb-api.com/en/API/Top250Movies/k_o0rb5eyp";
+//        ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
 
 
 //                NASA
-//        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
-//        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
