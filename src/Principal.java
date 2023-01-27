@@ -15,6 +15,11 @@ public class Principal {
         String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
         ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
+
+//          CRIANDO NOSSA PRÓPRIA API COM SPRING
+//        String url = "http://localhost:8081/linguagens";
+//        ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
+
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
 
@@ -23,7 +28,7 @@ public class Principal {
 
         var gerado = new GeradoraDeFigurinha();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < conteudos.size(); i++) {
 
             Conteudo conteudo = conteudos.get(i);
 
